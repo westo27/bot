@@ -3,8 +3,7 @@ require 'config.php';
 
 $data['message'] = "test 2";
 $data['fileUpload'] = true;
-$data['src'] = new \CurlFile('pics/big_boy.png', 'image/png', 'test.jpg');
-
+$data['src'] = new \CurlFile('pics/pano_test.png', 'image/png', 'test.jpg');
 
 $data['access_token'] = $page_access_token;
 
