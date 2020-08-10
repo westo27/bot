@@ -7,10 +7,11 @@ function generatePlanet() {
 
         $image->adaptiveResizeImage(1600, 1600);
 
-        $degrees = array(370);
+        $degrees = array(360);
         $image->distortImage(Imagick::DISTORTION_ARC, $degrees, TRUE);
 
-        $image->radialBlurImage(25,3);
+        $radialBlurRand = rand(2,10);
+        $image->radialBlurImage($radialBlurRand,3);
 //      $image->cycleColormapImage(1);
 
         $image->roundCorners(1040, 1040);

@@ -2,9 +2,17 @@
 require 'config.php';
 require 'planet.php';
 
+$file = 'counter.txt';
+$counter = 1;
+
+if (file_exists($file)) {
+    $counter += file_get_contents($file);
+}
+file_put_contents($file, $counter);
+
 generatePlanet();
 
-$data['message'] = "Planet";
+$data['message'] = "Planet " .$counter;
 $data['fileUpload'] = true;
 $data['src'] = new \CurlFile('pics_out/0.jpg', 'image/png', '0.jpg');
 
