@@ -1,9 +1,12 @@
 <?php
 require 'config.php';
+require 'planet.php';
 
-$data['message'] = "test 2";
+generatePlanet();
+
+$data['message'] = "Planet";
 $data['fileUpload'] = true;
-$data['src'] = new \CurlFile('pics/pano_test.png', 'image/png', 'test.jpg');
+$data['src'] = new \CurlFile('pics_out/0.jpg', 'image/png', '0.jpg');
 
 $data['access_token'] = $page_access_token;
 
